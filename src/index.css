@@ -1,8 +1,13 @@
 @import "tailwindcss";
 
-
-:root {
-  
+@theme {
+  --color-primary-text: #EEEEEE;
+  --color-secondary-text: #BBBBBB;
+  --color-tertiary-text: #5C5C5C;
+  --color-button-text: #111111;
+  --color-primary-background: #030303;
+  --color-stack-card-background: #101012;
+  --color-stack-card-background-secondary: #292D33;
 }
 
 .fugaz-one {
@@ -15,33 +20,6 @@
   font-family: "Danfo", serif;
   font-optical-sizing: auto;
   font-weight: 400;
-  font-style: normal;
-  font-variation-settings:
-    "ELSH" 0;
-}
-
-.danfo-medium {
-  font-family: "Danfo", serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
-  font-variation-settings:
-    "ELSH" 0;
-}
-
-.danfo-semibold {
-  font-family: "Danfo", serif;
-  font-optical-sizing: auto;
-  font-weight: 600;
-  font-style: normal;
-  font-variation-settings:
-    "ELSH" 0;
-}
-
-.danfo-bold {
-  font-family: "Danfo", serif;
-  font-optical-sizing: auto;
-  font-weight: 700;
   font-style: normal;
   font-variation-settings:
     "ELSH" 0;
