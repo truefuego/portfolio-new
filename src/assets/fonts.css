@@ -1,0 +1,52 @@
+.fugaz-one {
+    font-family: "Fugaz One", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.danfo {
+    font-family: "Danfo", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+    "ELSH" 0;
+}
+
+.climate-crisis {
+    font-family: "Climate Crisis", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+    "YEAR" 1979;
+}
+
+.funnel-sans {
+    font-family: "Funnel Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.funnel-sans-medium {
+    font-family: "Funnel Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.funnel-sans-semibold {
+    font-family: "Funnel Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.funnel-sans-bold {
+    font-family: "Funnel Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+  
