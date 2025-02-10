@@ -7,15 +7,15 @@ const CustomText: React.FC<ICustomText> = ({
   classes,
   fontFamily,
   fontSize,
-  fontColor,
+  textColor,
   link,
   openNewPage,
-  isClickable = true
+  isClickable = false
 }) => {
   const navigate = useNavigate();
   return (
     <p
-      className={`text-${fontColor ? fontColor : "primary-text"} 
+      className={`text-${textColor ? textColor : "primary-text"} 
         ${fontFamily ? fontFamily : "funnel-sans"} 
         text-${fontSize} ${classes}
         ${link ? "cursor-pointer" : ""}

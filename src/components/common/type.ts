@@ -2,7 +2,7 @@ export interface ICustomText {
     title: string;
     classes?: string;
     fontSize?: string;
-    fontColor?: string;
+    textColor?: string;
     fontFamily?: string;
     link?: string;
     openNewPage?: boolean;

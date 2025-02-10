@@ -6,14 +6,14 @@ const CustomLinkText: React.FC<ICustomText> = ({
   classes,
   fontFamily,
   fontSize,
-  fontColor,
+  textColor,
   link,
   isClickable = true,
   href
 }) => {
   return (
     <a
-      className={`text-${fontColor ? fontColor : "primary-text"} 
+      className={`text-${textColor ? textColor : "primary-text"} 
         ${fontFamily ? fontFamily : "funnel-sans"} 
         text-${fontSize} ${classes}
         ${link ? "cursor-pointer" : ""}

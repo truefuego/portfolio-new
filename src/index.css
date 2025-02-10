@@ -9,6 +9,8 @@
   --color-primary-background: #030303;
   --color-stack-card-background: #101012;
   --color-stack-card-background-secondary: #292D33;
+
+  --text-hero-large: 40vw;
 }
 
 .default-width{
