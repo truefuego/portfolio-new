@@ -1,8 +1,8 @@
 import React from "react";
-import { ICustomText } from "./type";
+import { ICustomTextProps } from "./type";
 import { useNavigate } from "react-router-dom";
 
-const CustomText: React.FC<ICustomText> = ({
+const CustomText: React.FC<ICustomTextProps> = ({
   title,
   classes,
   fontFamily,
@@ -15,9 +15,9 @@ const CustomText: React.FC<ICustomText> = ({
   const navigate = useNavigate();
   return (
     <p
-      className={`text-${textColor ? textColor : "primary-text"} 
+      className={`${classes} text-${textColor ? textColor : "primary-text"} 
         ${fontFamily ? fontFamily : "funnel-sans"} 
-        text-${fontSize} ${classes}
+        text-${fontSize} 
         ${link ? "cursor-pointer" : ""}
         ${isClickable ? '' : 'pointer-events-none'}
     `}

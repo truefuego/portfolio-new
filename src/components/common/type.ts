@@ -1,4 +1,4 @@
-export interface ICustomText {
+export interface ICustomTextProps {
     title: string;
     classes?: string;
     fontSize?: string;
@@ -8,4 +8,11 @@ export interface ICustomText {
     openNewPage?: boolean;
     isClickable?: boolean;
     href?: string;
+}
+
+export interface ICustomImageProps {
+    src: string;
+    alt: string;
+    classes?: string;
+    link?: string;
 }

@@ -1,7 +1,7 @@
 import React from 'react'
-import { ICustomText } from "./type";
+import { ICustomTextProps } from "./type";
 
-const CustomLinkText: React.FC<ICustomText> = ({
+const CustomLinkText: React.FC<ICustomTextProps> = ({
   title,
   classes,
   fontFamily,
