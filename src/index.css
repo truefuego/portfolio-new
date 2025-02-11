@@ -1,6 +1,10 @@
 @import "tailwindcss";
 @import '../src/assets/fonts.css';
 
+:root {
+  overflow-x: hidden;
+}
+
 @theme {
   --color-primary-text: #EEEEEE;
   --color-secondary-text: #BBBBBB;
@@ -15,4 +19,18 @@
 
 .default-width{
   width: 85%;
+}
+
+@keyframes collapse {
+  0% {
+    height: 200px;
+  }
+  100% {
+    height: 0;
+  }
+}
+
+.collapsible-div {
+  height: 200px;
+  animation: collapse 500ms ease-in-out 500ms forwards;
 }
