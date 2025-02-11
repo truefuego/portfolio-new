@@ -17,6 +17,7 @@ const HomePage:React.FC = () => {
         fontFamily='climate-crisis'
         classes='text-center text-[5.4vw] -mt-[5vh] sm:-mt-[10vw]'
       />
+      <p className='text-primary-text text-hero-large hidden'>hi</p> 
     </div>
   )
 }
