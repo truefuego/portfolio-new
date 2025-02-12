@@ -3,11 +3,13 @@ import { ICustomProjectCardProps } from './type';
 import CustomText from '../common/CustomTextNormal';
 import CustomImage from '../common/CustomImage';
 import ArrowIcon from '../../assets/icons/arrow.svg';
+import { motion, useTransform } from 'framer-motion';
 
-const CustomProjectCard:React.FC<ICustomProjectCardProps> = ({ projectData }) => {
-  
+const CustomProjectCard:React.FC<ICustomProjectCardProps> = ({ projectData, range, targetScale, scrollProgress }) => {
+
+  const cardScale = useTransform(scrollProgress, range, [1,targetScale])
   return (
-    <div className={`w-[84%] border-2 rounded-2xl`} style={{ backgroundColor: projectData.backgroundColor, borderColor: projectData.borderColor }}>
+    <motion.div className='w-[84%] border-2 rounded-2xl sticky top-20' style={{ backgroundColor: projectData.backgroundColor, borderColor: projectData.borderColor, scale: cardScale }}>
       <div className='flex justify-between' style={{ borderBottom: '2px', borderColor: projectData.borderColor}}>
         <CustomText title={String(projectData.year)} classes='p-4 pb-1 funnel-sans-semibold' fontSize='lg'/>
         <CustomText title={projectData.type} classes='p-4 pb-1 funnel-sans-semibold' fontSize='lg'/>
@@ -28,8 +30,8 @@ const CustomProjectCard:React.FC<ICustomProjectCardProps> = ({ projectData }) =>
         </div>
         <CustomImage src={ArrowIcon} alt='arrow' classes='cursor-pointer self-start hover:-rotate-45 duration-500 ease-in-out'/>
       </div>
-      <CustomImage src={projectData.imageURI} alt={projectData.title} classes='w-[calc(100%-16px)] m-2 rounded-2xl'/>
-    </div>
+      <CustomImage src={projectData.imageURI} alt={projectData.title} classes='w-[calc(100%-16px)] m-2 rounded-2xl object-cover object-center max-h-[70vh]'/>
+    </motion.div>
   )
 }
 

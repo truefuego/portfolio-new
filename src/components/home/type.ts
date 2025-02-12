@@ -1,3 +1,4 @@
+import { MotionValue } from "framer-motion";
 import { ICustomLabelProps } from "../type"
 
 export interface ICustomStackCardProps{
@@ -8,6 +9,8 @@ export interface ICustomStackCardProps{
 }
 
 export interface ICustomProjectCardProps{
+    range: number[],
+    targetScale: number,
     projectData: {
         title: string,
         year: number
@@ -18,5 +21,6 @@ export interface ICustomProjectCardProps{
         slug: string,
         backgroundColor: string,
         borderColor: string
-    }
+    },
+    scrollProgress: MotionValue<number>;
 }
