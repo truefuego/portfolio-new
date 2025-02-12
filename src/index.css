@@ -30,6 +30,18 @@
   }
 }
 
+@keyframes shine {
+  from { -webkit-mask-position: 150%; }
+  to { -webkit-mask-position: -50%; }
+}
+
+
+.shining-text {
+  mask-image: linear-gradient(-90deg, #eeeeee 30%, #eeeeee88 50%, #eeeeee 70%);
+  mask-size: 200%;
+  animation: shine 3s linear infinite;
+}
+
 .collapsible-div {
   height: 200px;
   animation: collapse 500ms ease-in-out 500ms forwards;

@@ -17,7 +17,7 @@ const HomeHeroSection:React.FC = () => {
         <CustomText 
             title='Designer & Developer'
             fontFamily='climate-crisis'
-            classes='text-center text-[5.4vw] -mt-[5vh] sm:-mt-[10vw]'
+            classes='text-center text-[5.4vw] -mt-[5vh] sm:-mt-[10vw] shining-text'
         />
         <div className='text-primary-text text-secondary-text text-hero-large hidden' /> 
         <div className='flex justify-between w-[85%] my-8 items-center'>
