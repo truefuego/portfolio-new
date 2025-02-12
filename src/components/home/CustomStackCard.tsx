@@ -6,7 +6,7 @@ import ArrowRightIcon from '../../assets/icons/arrow_right.svg';
 
 const CustomStackCard:React.FC<ICustomStackCardProps> = ({ title, description, link, imageURI }) => {
   return (
-   <div className='flex items-center gap-4 justify-between bg-stack-card-background p-2 rounded-xl'>
+   <div className='flex items-center gap-4 justify-between bg-stack-card-background p-2 rounded-xl cursor-pointer' onClick={() => window.open(link, '_blank')}>
     <div className='flex items-center'>
       <div className='bg-stack-card-background-secondary p-2 rounded-lg'>
         <CustomImage src={imageURI} alt={title} />
@@ -16,9 +16,7 @@ const CustomStackCard:React.FC<ICustomStackCardProps> = ({ title, description, l
         <CustomText title={description} classes='text-sm md:hidden xl:block' textColor='secondary-text'/>
       </div>
     </div>
-    <div onClick={() => window.open(link, '_blank')}>
-      <CustomImage src={ArrowRightIcon} alt='arrow-icon'/>
-    </div>
+    <CustomImage src={ArrowRightIcon} alt='arrow-icon'/>
    </div>
   )
 }

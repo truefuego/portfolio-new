@@ -4,7 +4,7 @@ import CustomLinkText from "./CustomLinkText";
 
 const NavBar: React.FC = () => {
   return (
-    <div className="flex flex-row justify-between p-8 default-width">
+    <div className="flex flex-row justify-between p-8 default-width fixed z-20 bg-gradient-to-b from-primary-background to-primary-background/0">
       <CustomText title="ANKIT" fontFamily="climate-crisis" />
       <div className="flex flex-row gap-16">        
         <CustomText title="WORKS" link="/works" isClickable classes="hover:translate-y-2 transition-transform duration-500 ease-in-out hover:text-secondary-text" />

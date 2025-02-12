@@ -2,6 +2,7 @@ import React from 'react'
 import NavBar from '../components/common/NavBar';
 import HomeHeroSection from '../components/home/HomeHeroSection';
 import CustomAboutMeSection from '../components/home/CustomAboutMeSection';
+import Footer from '../components/common/Footer';
 
 const HomePage:React.FC = () => {
   return (
@@ -10,6 +11,7 @@ const HomePage:React.FC = () => {
       <NavBar />
       <HomeHeroSection />
       <CustomAboutMeSection />
+      <Footer />
     </div>
   )
 }

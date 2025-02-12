@@ -10,7 +10,7 @@ const HomeHeroSection:React.FC = () => {
     <>
         <CustomText
             title='WEB'
-            classes='leading-[90%] bg-clip-text text-transparent bg-gradient-to-b from-primary-text/50 to-primary-background/75' 
+            classes='leading-[90%] mt-24 bg-clip-text text-transparent bg-gradient-to-b from-primary-text/50 to-primary-background/75' 
             fontFamily='danfo'
             fontSize='hero-large'
         />
@@ -23,8 +23,8 @@ const HomeHeroSection:React.FC = () => {
         <div className='flex justify-between w-[85%] mt-8 items-center'>
             <div className='flex items-center gap-4'>
                 <CustomText title='Say Hello' fontFamily='funnel-sans-semibold' classes='mx-4'/>
-                <CustomImage src={TwitterLogo} alt='twitter-logo' classes='rounded-full' link='https://x.com/AnkitSh44355307' />
-                <CustomImage src={LinkedInLogo} alt='linkedin' classes='rounded-full' link='https://www.linkedin.com/in/ankit-sharma-76a286228/' />
+                <CustomImage src={TwitterLogo} alt='twitter-logo' classes='rounded-full hover:scale-110 duration-500 ease-in-out' link='https://x.com/AnkitSh44355307' />
+                <CustomImage src={LinkedInLogo} alt='linkedin' classes='rounded-full hover:scale-110 duration-500 ease-in-out' link='https://www.linkedin.com/in/ankit-sharma-76a286228/' />
             </div>
             <CustomText 
                 title='Hello, I’m Ankit Sharma - a backend and web developer skilled in Node.js, React.js, and MongoDB. I build scalable, high-performance solutions with a strong focus on data structures and algorithms. Based in Bhilai, India.' 
@@ -36,7 +36,7 @@ const HomeHeroSection:React.FC = () => {
                 href="mailto:ankitsharma9152003@gmail.com"
                 isClickable
                 textColor='button-text'
-                classes="funnel-sans-medium bg-sky-200 cursor-pointer px-4 py-2 mx-4 rounded-2xl hover:bg-sky-300 text-button-text duration-700 ease-in-out border-2 border-amber-50"
+                classes="funnel-sans-medium bg-sky-200 cursor-pointer px-4 py-2 mx-4 rounded-2xl hover:bg-sky-300 hover:scale-105 text-button-text duration-700 ease-in-out border-2 border-amber-50"
             />
         </div>
     </>
