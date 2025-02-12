@@ -4,6 +4,7 @@ import FigmaLogo from '../assets/icons/figma 1.svg';
 import MongoDBLogo from '../assets/icons/mongodb 1.svg';
 import TailwindCSSLogo from '../assets/icons/tailwindcss 1.svg';
 import PythonLogo from '../assets/icons/python 1.svg';
+import DuskImage from '../assets/images/dusk-image.webp';
 
 export const myStackData = [
     {
@@ -43,3 +44,25 @@ export const myStackData = [
         imageURI: PythonLogo
     }
 ];
+
+export const projectsCardData = 
+    {
+        title: 'Dusk',
+        year: 2024,
+        type: 'Game',
+        about: [
+            {
+                label: 'One Week',
+                text: 'challenge to test my game development skills'
+            },
+            {
+                label: 'ECS & FSM',
+                text: 'for modular, responsive and optimal gameplay mechanics'
+            }
+        ],
+        skills: 'Roadmapping, QA, Python (Pygame)',
+        imageURI: DuskImage,
+        slug: '/dusk',
+        backgroundColor: '#397A3D',
+        borderColor: '#49A14F'
+    }

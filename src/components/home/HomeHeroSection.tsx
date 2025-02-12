@@ -7,7 +7,7 @@ import TwitterLogo from '../../assets/icons/TwitterLogo.svg';
 
 const HomeHeroSection:React.FC = () => {
   return (
-    <>
+    <div className='flex flex-col items-center h-screen'>
         <CustomText
             title='WEB'
             classes='leading-[90%] mt-24 bg-clip-text text-transparent bg-gradient-to-b from-primary-text/50 to-primary-background/75' 
@@ -20,7 +20,7 @@ const HomeHeroSection:React.FC = () => {
             classes='text-center text-[5.4vw] -mt-[5vh] sm:-mt-[10vw]'
         />
         <div className='text-primary-text text-secondary-text text-hero-large hidden' /> 
-        <div className='flex justify-between w-[85%] mt-8 items-center'>
+        <div className='flex justify-between w-[85%] my-8 items-center'>
             <div className='flex items-center gap-4'>
                 <CustomText title='Say Hello' fontFamily='funnel-sans-semibold' classes='mx-4'/>
                 <CustomImage src={TwitterLogo} alt='twitter-logo' classes='rounded-full hover:scale-110 duration-500 ease-in-out' link='https://x.com/AnkitSh44355307' />
@@ -39,7 +39,7 @@ const HomeHeroSection:React.FC = () => {
                 classes="funnel-sans-medium bg-sky-200 cursor-pointer px-4 py-2 mx-4 rounded-2xl hover:bg-sky-300 hover:scale-105 text-button-text duration-700 ease-in-out border-2 border-amber-50"
             />
         </div>
-    </>
+    </div>
   )
 }
 
