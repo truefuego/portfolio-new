@@ -8,7 +8,7 @@ import { myStackData } from '../../constants/homeConstants';
 
 const CustomAboutMeSection:React.FC = () => {
   return (
-    <div className='relative flex flex-col items-center w-screen' style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 1)), url(${GridLines})`, backgroundSize: 'cover' } as React.CSSProperties}>
+    <div className='relative flex flex-col items-center w-screen' style={{ backgroundImage: `linear-gradient(#030303, rgba(0, 0, 0, 0.8), #030303), url(${GridLines})`, backgroundSize: 'cover' } as React.CSSProperties}>
       <div className='grid grid-cols-2 z-10 pt-48 w-[85%]'>
       <div className='flex flex-row justify-end items-start'>
         <CustomText 
