@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import CustomText from './CustomTextNormal'
 import CustomImage from './CustomImage'
 import CustomLinkText from './CustomLinkText'
@@ -8,6 +8,15 @@ import EmailLogo from '../../assets/icons/email.svg';
 import CustomLabel from '../CustomLabel';
 
 const Footer:React.FC = () => {
+
+  const [currentTime, setCurrentTime] = useState(new Date().toLocaleTimeString('en-US', { timeZone: 'Asia/Kolkata' }));
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentTime(new Date().toLocaleTimeString('en-US', { timeZone: 'Asia/Kolkata' }));
+    }, 1000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <>
       <div className='w-[65%] flex items-center gap-8 mb-24'>
@@ -35,10 +44,10 @@ const Footer:React.FC = () => {
       </div>
       <div className='w-[85%] flex m-12'>
         <CustomLabel label='version' text='2025 © Edition'/>
-        <CustomLabel label='local time' text='6:56 PM GMT+5:30'/>
+        <CustomLabel label='local time' text={currentTime}/>
       </div>
     </>
   )
 }
 
-export default Footer
+export default Footer;

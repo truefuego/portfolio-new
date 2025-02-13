@@ -6,6 +6,7 @@ import Footer from '../components/common/Footer';
 import CustomProjectCard from '../components/home/CustomProjectCard';
 import { projectsCardData } from '../constants/homeConstants';
 import { useScroll } from 'framer-motion';
+import ScreenWrapper from '../components/ScreenWrapper';
 
 const HomePage:React.FC = () => {
   const containerRef = useRef(null);
@@ -15,7 +16,7 @@ const HomePage:React.FC = () => {
   })
 
   return (
-    <div className='bg-primary-background min-h-screen w-screen flex flex-col items-center'>
+    <ScreenWrapper>
       <div className='collapsible-div' />
       <NavBar />
       <HomeHeroSection />
@@ -35,7 +36,7 @@ const HomePage:React.FC = () => {
       </div>
       <CustomAboutMeSection />
       <Footer />
-    </div>
+    </ScreenWrapper>
   )
 }
 

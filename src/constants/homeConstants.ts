@@ -49,8 +49,7 @@ export const myStackData = [
     }
 ];
 
-export const projectsCardData = 
-    [
+export const projectsCardData = [
     {
         title: 'Dusk',
         year: 2024,
@@ -88,8 +87,8 @@ export const projectsCardData =
         skills: "React.js, OAuth 2.0, API Integration",
         imageURI: PlaylistMigratorImage,
         slug: "/playlist-migrator",
-        backgroundColor: "#1DB954",
-        borderColor: "#1ED760"
+        backgroundColor: "#293129",
+        borderColor: "#4D584E"
     },
     {
         title: "Geo Explorer",
@@ -108,8 +107,8 @@ export const projectsCardData =
         skills: "React.js, Zustand, Google Maps API",
         imageURI: GeoExplorerImage,
         slug: "/geo-explorer",
-        backgroundColor: "#4285F4",
-        borderColor: "#357AE8"
+        backgroundColor: "#692D2D",
+        borderColor: "#954949"
     },
     {
         title: "Porsche Desktop Clone",
@@ -128,8 +127,8 @@ export const projectsCardData =
         skills: "React.js, TailwindCSS",
         imageURI: PorscheImage,
         slug: "/porsche-clone",
-        backgroundColor: "#000000",
-        borderColor: "#FF0000"
+        backgroundColor: "#848484",
+        borderColor: "#B5B5B5"
     },
     {
         title: "UpTodo-ReactNative",
@@ -148,9 +147,8 @@ export const projectsCardData =
         skills: "React Native, JavaScript",
         imageURI: UpTodoImage,
         slug: "/uptodo-reactnative",
-        backgroundColor: "#4CAF50",
-        borderColor: "#388E3C"
+        backgroundColor: "#272727",
+        borderColor: "#3A3A3A"
     }
-    
 ]
     
