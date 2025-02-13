@@ -8,6 +8,7 @@ export interface ICustomTextProps {
     openNewPage?: boolean;
     isClickable?: boolean;
     href?: string;
+    onClick?: () => void;
 }
 
 export interface ICustomImageProps {
@@ -15,4 +16,10 @@ export interface ICustomImageProps {
     alt: string;
     classes?: string;
     link?: string;
+}
+
+export interface ICustomLoaderProps {
+    delay?: number;
+    duration?: number;
+    path?: string;
 }
