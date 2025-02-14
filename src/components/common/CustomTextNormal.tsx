@@ -10,7 +10,8 @@ const CustomText: React.FC<ICustomTextProps> = ({
   textColor,
   link,
   openNewPage,
-  isClickable = false
+  isClickable = false,
+  onClick
 }) => {
   const navigate = useNavigate();
   return (
@@ -18,12 +19,13 @@ const CustomText: React.FC<ICustomTextProps> = ({
       className={`${classes} text-${textColor ? textColor : "primary-text"} 
         ${fontFamily ? fontFamily : "funnel-sans"} 
         text-${fontSize} 
-        ${link ? "cursor-pointer" : ""}
-        ${isClickable ? '' : 'pointer-events-none'}
+        ${isClickable ? "cursor-pointer" : "pointer-events-none"}
     `}
       onClick={() => {
         if (link) {
           return openNewPage ? window.open(link, "_blank") : navigate(link);
+        } else if (onClick) {
+          onClick?.();
         }
       }}
     >

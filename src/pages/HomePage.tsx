@@ -1,8 +1,6 @@
 import React, { useRef } from 'react'
-import NavBar from '../components/common/NavBar';
 import HomeHeroSection from '../components/home/HomeHeroSection';
 import CustomAboutMeSection from '../components/home/CustomAboutMeSection';
-import Footer from '../components/common/Footer';
 import CustomProjectCard from '../components/home/CustomProjectCard';
 import { projectsCardData } from '../constants/homeConstants';
 import { useScroll } from 'framer-motion';
@@ -17,8 +15,6 @@ const HomePage:React.FC = () => {
 
   return (
     <ScreenWrapper>
-      <div className='collapsible-div' />
-      <NavBar />
       <HomeHeroSection />
       <div className='flex flex-col w-[100%] items-center my-24' ref={containerRef}>
         {projectsCardData.map((project, index) => {
@@ -35,7 +31,6 @@ const HomePage:React.FC = () => {
         })}
       </div>
       <CustomAboutMeSection />
-      <Footer />
     </ScreenWrapper>
   )
 }
