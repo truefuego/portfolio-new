@@ -20,8 +20,8 @@ export const CustomLoaderEnter: React.FC<ICustomLoaderProps> = ({ path, duration
   return (
     <motion.div 
       className='absolute flex w-screen h-screen bg-secondary-background items-center justify-center' 
-      initial={{ top: '100vh', zIndex: -30 }} 
-      animate={{ top: 0, zIndex: 30 }}
+      initial={{ top: scrollY + window.outerWidth, zIndex: -30 }} 
+      animate={{ top: scrollY, zIndex: 30 }}
       transition={{ duration: duration, ease: 'easeInOut' }}>
       <CustomText title={`• ${String(path?.toUpperCase())}`} fontFamily='funnel-sans-semibold' fontSize='5xl'/>
     </motion.div>

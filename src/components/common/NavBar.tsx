@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import CustomText from "./CustomTextNormal";
 import CustomLinkText from "./CustomLinkText";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import CustomLoader, { CustomLoaderEnter } from "./CustomLoader";
 import { motion } from "framer-motion";
 
@@ -9,6 +9,11 @@ const NavBar: React.FC = () => {
   const navigate = useNavigate();
   const [showExitLoader, setShowExitLoader] = useState<boolean>(false);
   const [nextPage, setNextPage] = useState<string>('');
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   const handleClick = ({ link }: { link: string }) => {
     const directedPage = window.location.pathname.split('/').pop() || '';
