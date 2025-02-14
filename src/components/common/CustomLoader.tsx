@@ -10,7 +10,7 @@ const CustomLoader: React.FC<ICustomLoaderProps> = ({ delay }) => {
       className='absolute flex w-screen h-screen z-20 bg-secondary-background items-center justify-center' 
       initial={{ top: 0 }} 
       animate={{ top: '-100vh' }}
-      transition={{ duration: 1, delay: delay , ease: 'easeInOut' }}>
+      transition={{ duration: .5, delay: delay , ease: 'easeInOut' }}>
       <CustomText title={`• ${String(pageTitle ? pageTitle : 'HELLO')}`} fontFamily='funnel-sans-semibold' fontSize='5xl'/>
     </motion.div>
   );
