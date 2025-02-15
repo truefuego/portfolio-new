@@ -21,11 +21,11 @@ const InfiniteSlider = () => {
         } else {
             finalPosition -= 24*4*aboutMeImages.length;
         }
-        const controls = animate(xTranslation, [0, finalPosition], {
+        const controls = animate(xTranslation, finalPosition, {
             ease: 'linear',
             duration: 25,
             repeat: Infinity,
-            repeatLoop: 'loop',
+            repeatType: 'loop',
             repeatDelay: 0 
         });
         return controls.stop;
