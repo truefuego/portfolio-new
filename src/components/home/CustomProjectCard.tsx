@@ -2,7 +2,7 @@ import React from 'react';
 import { ICustomProjectCardProps } from './type';
 import CustomText from '../common/CustomTextNormal';
 import CustomImage from '../common/CustomImage';
-import ArrowIcon from '../../assets/icons/arrow.svg';
+import { ArrowIcon } from '../../assets/icons/icons';
 import { motion, useTransform } from 'framer-motion';
 
 const CustomProjectCard:React.FC<ICustomProjectCardProps> = ({ projectData, range, targetScale, scrollProgress }) => {
@@ -28,7 +28,9 @@ const CustomProjectCard:React.FC<ICustomProjectCardProps> = ({ projectData, rang
           </div>
           <CustomText title={`Skills - ${projectData.skills}`} classes='text-xl funnel-sans-semibold'/>
         </div>
-        <CustomImage src={ArrowIcon} alt='arrow' classes='cursor-pointer self-start hover:-rotate-45 duration-500 ease-in-out'/>
+        <div className='cursor-pointer self-start hover:-rotate-45 duration-500 ease-in-out'>
+          <ArrowIcon />
+        </div>
       </div>
       <CustomImage src={projectData.imageURI} alt={projectData.title} classes='w-[calc(100%-16px)] m-2 rounded-2xl object-cover object-center max-h-[70vh]'/>
     </motion.div>

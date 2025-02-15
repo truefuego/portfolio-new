@@ -1,8 +1,7 @@
 import React from 'react'
-import CustomImage from '../common/CustomImage'
 import GridLines from '../../assets/images/grid-lines.png';
 import CustomText from '../common/CustomTextNormal';
-import MouseIcon from '../../assets/icons/mouse.svg';
+import { MouseHoverIcon } from '../../assets/icons/icons';
 import CustomStackCard from './CustomStackCard';
 import { myStackData } from '../../constants/homeConstants';
 
@@ -22,8 +21,8 @@ const CustomAboutMeSection:React.FC = () => {
         classes='text-center text-[12vw] w-[35vw]'
         fontFamily='funnel-sans-semibold'
       />
-      <div className='flex flex-row justify-end items-start'>
-        <CustomImage src={MouseIcon} alt='mouse' classes='w-[96px] mx-12'/>
+      <div className='flex flex-row justify-end items-start mx-12'>
+        <MouseHoverIcon />
       </div>
       <CustomText 
           title='I excel in crafting optimized frontend systems, intuitive user interfaces, and high-performance applications.'
@@ -35,7 +34,7 @@ const CustomAboutMeSection:React.FC = () => {
         <CustomText title='MY STACK' fontFamily='climate-crisis' fontSize='4xl'/>
         <CustomText title='Commitment to staying updated with the latest trends and techniques.' classes='' textColor='secondary-text'/>
         <div className='grid md:grid-cols-2 grid-cols-1 gap-4 mt-8'>
-          {myStackData.map((item, index) => <CustomStackCard key={index} title={item.title} description={item.description} link={item.link} imageURI={item.imageURI} />)}
+          {myStackData.map((item, index) => <CustomStackCard key={index} title={item.title} description={item.description} link={item.link} Icon={item.Icon} />)}
         </div>
       </div>
     </div>

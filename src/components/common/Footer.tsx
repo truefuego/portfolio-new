@@ -1,10 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import CustomText from './CustomTextNormal'
-import CustomImage from './CustomImage'
 import CustomLinkText from './CustomLinkText'
-import LinkedInLogo from '../../assets/icons/LinkedinLogo.svg';
-import TwitterLogo from '../../assets/icons/TwitterLogo.svg';
-import EmailLogo from '../../assets/icons/email.svg';
+import { LinkedInIcon, TwitterIcon, EmailIcon } from '../../assets/icons/icons';
 import CustomLabel from '../CustomLabel';
 
 const Footer:React.FC = () => {
@@ -20,14 +17,18 @@ const Footer:React.FC = () => {
   return (
     <>
       <div className='w-[65%] flex items-center gap-8 mb-24'>
-        <CustomImage src={EmailLogo} alt='email' />
+        <EmailIcon />
         <CustomText title="Let's Work Together" fontFamily='climate-crisis' classes='text-5xl'/>
       </div>
       <div className='flex justify-between w-[85%] mt-8 items-center my-24'>
         <div className='flex items-center gap-4'>
           <CustomText title='Say Hello' fontFamily='funnel-sans-semibold' classes='mx-4'/>
-          <CustomImage src={TwitterLogo} alt='twitter-logo' classes='rounded-full hover:scale-110 duration-500 ease-in-out' link='https://x.com/AnkitSh44355307' />
-          <CustomImage src={LinkedInLogo} alt='linkedin' classes='rounded-full hover:scale-110 duration-500 ease-in-out' link='https://www.linkedin.com/in/ankit-sharma-76a286228/' />
+          <div className='rounded-full hover:scale-110 duration-500 ease-in-out cursor-pointer' onClick={() => window.open('https://x.com/AnkitSh44355307', '_blank')}>
+            <TwitterIcon />
+          </div>
+          <div className='rounded-full hover:scale-110 duration-500 ease-in-out cursor-pointer' onClick={() => window.open('https://www.linkedin.com/in/ankit-sharma-76a286228/', '_blank')}>
+            <LinkedInIcon />
+          </div>
         </div>
         <CustomText 
           title="Passionate about building scalable apps and solving complex problems? let's collaborate on innovative tech solutions!" 

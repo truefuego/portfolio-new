@@ -1,9 +1,7 @@
 import React from 'react'
 import CustomText from '../common/CustomTextNormal'
-import CustomImage from '../common/CustomImage'
 import CustomLinkText from '../common/CustomLinkText'
-import LinkedInLogo from '../../assets/icons/LinkedinLogo.svg';
-import TwitterLogo from '../../assets/icons/TwitterLogo.svg';
+import { LinkedInIcon, TwitterIcon } from '../../assets/icons/icons';
 
 const HomeHeroSection:React.FC = () => {
   return (
@@ -23,8 +21,12 @@ const HomeHeroSection:React.FC = () => {
         <div className='flex justify-between w-[85%] my-8 items-center'>
             <div className='flex items-center gap-4'>
                 <CustomText title='Say Hello' fontFamily='funnel-sans-semibold' classes='mx-4'/>
-                <CustomImage src={TwitterLogo} alt='twitter-logo' classes='rounded-full hover:scale-110 duration-500 ease-in-out' link='https://x.com/AnkitSh44355307' />
-                <CustomImage src={LinkedInLogo} alt='linkedin' classes='rounded-full hover:scale-110 duration-500 ease-in-out' link='https://www.linkedin.com/in/ankit-sharma-76a286228/' />
+                <div className='rounded-full hover:scale-110 duration-500 ease-in-out cursor-pointer' onClick={() => window.open('https://x.com/AnkitSh44355307', '_blank')}>
+                    <TwitterIcon />
+                </div>
+                <div className='rounded-full hover:scale-110 duration-500 ease-in-out cursor-pointer' onClick={() => window.open('https://www.linkedin.com/in/ankit-sharma-76a286228/', '_blank')}>
+                    <LinkedInIcon />
+                </div>
             </div>
             <CustomText 
                 title='Hello, I’m Ankit Sharma - a backend and web developer skilled in Node.js, React.js, and MongoDB. I build scalable, high-performance solutions with a strong focus on data structures and algorithms. Based in Bhilai, India.' 

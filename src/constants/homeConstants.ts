@@ -1,9 +1,4 @@
-import ReactJSLogo from '../assets/icons/react 1.svg';
-import NodeJSLogo from  '../assets/icons/node 1.svg';
-import FigmaLogo from '../assets/icons/figma 1.svg';
-import MongoDBLogo from '../assets/icons/mongodb 1.svg';
-import TailwindCSSLogo from '../assets/icons/tailwindcss 1.svg';
-import PythonLogo from '../assets/icons/python 1.svg';
+import { ReactIcon, NodeIcon, FigmaIcon,MongoDBIcon, TailwindCSSIcon, PythonIcon } from '../assets/icons/icons';
 import DuskImage from '../assets/images/dusk-image.webp';
 import UpTodoImage from '../assets/images/uptodo-image.png';
 import GeoExplorerImage from '../assets/images/geo-image.webp';
@@ -15,37 +10,37 @@ export const myStackData = [
         title: 'React JS', 
         description: 'Open-source JavaScript library', 
         link: 'https://react.dev/', 
-        imageURI: ReactJSLogo
+        Icon: ReactIcon
     },
     {
         title: 'Node JS', 
         description: 'Backend development, API integrations', 
         link: 'https://nodejs.org/en', 
-        imageURI: NodeJSLogo
+        Icon: NodeIcon
     },
     {
         title: 'Figma', 
         description: 'Interface Design Tool', 
         link: 'https://www.figma.com', 
-        imageURI: FigmaLogo
+        Icon: FigmaIcon
     },
     {
         title: 'Mongo DB', 
         description: 'Document-oriented NoSQL database', 
         link: 'https://www.mongodb.com/', 
-        imageURI: MongoDBLogo
+        Icon: MongoDBIcon
     },
     {
         title: 'TailwindCSS', 
         description: 'CSS framework', 
         link: 'https://tailwindcss.com/', 
-        imageURI: TailwindCSSLogo
+        Icon: TailwindCSSIcon
     },
     {
         title: 'Python', 
         description: 'Object-oriented programming language', 
         link: 'https://www.python.org/', 
-        imageURI: PythonLogo
+        Icon: PythonIcon
     }
 ];
 
