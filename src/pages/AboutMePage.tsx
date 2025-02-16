@@ -5,6 +5,7 @@ import { ICustomLabelProps } from '../components/type';
 import CustomImage from '../components/common/CustomImage';
 import ProfilePhoto from '../assets/images/profile-photo.jpg';
 import InfiniteSlider from '../components/InfiniteSlider';
+import AboutMeDataSection from '../components/aboutMe/AboutMeDataSection';
 
 const AboutMePage:React.FC = () => {
 
@@ -42,6 +43,7 @@ const AboutMePage:React.FC = () => {
           <RenderLabel label='.freelance' text='Available'/>
         </div>
       </div>
+      <AboutMeDataSection />
     </ScreenWrapper>
   )
 }
