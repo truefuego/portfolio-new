@@ -37,7 +37,7 @@ const AboutMePage:React.FC = () => {
             <CustomImage src={ProfilePhoto} alt='profile-photo' classes='h-[400px] w-[300px] rounded-2xl shad'/>
           </div>
         </div>
-        <div className='grid grid-cols-3 w-[100%] gap-8'>
+        <div className='grid grid-cols-3 w-[100%] gap-16'>
           <RenderLabel label='.experience' text='6 Months'/>
           <RenderLabel label='.location' text='Bhilai, IN'/>
           <RenderLabel label='.freelance' text='Available'/>
