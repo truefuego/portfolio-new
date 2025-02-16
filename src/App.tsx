@@ -11,8 +11,8 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/works" element={<PersonalProjectsPage />} />
-        <Route path="/project/:id" element={<ProjectPage />} />
+        <Route path="/work" element={<PersonalProjectsPage />} />
+        <Route path="/work/:id" element={<ProjectPage />} />
         <Route path="/about-me" element={<AboutMePage />} />
         <Route path="/gallery" element={<GalleryPage />} />
         <Route path="*" element={<NotFoundPage />} />

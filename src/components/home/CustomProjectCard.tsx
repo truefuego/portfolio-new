@@ -4,8 +4,10 @@ import CustomText from '../common/CustomTextNormal';
 import CustomImage from '../common/CustomImage';
 import { ArrowIcon } from '../../assets/icons/icons';
 import { motion, useTransform } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 
 const CustomProjectCard:React.FC<ICustomProjectCardProps> = ({ projectData, range, targetScale, scrollProgress }) => {
+  const navigate = useNavigate();
 
   const cardScale = useTransform(scrollProgress, range, [1,targetScale])
   return (
@@ -28,7 +30,7 @@ const CustomProjectCard:React.FC<ICustomProjectCardProps> = ({ projectData, rang
           </div>
           <CustomText title={`Skills - ${projectData.skills}`} classes='text-xl funnel-sans-semibold'/>
         </div>
-        <div className='cursor-pointer self-start hover:-rotate-45 duration-500 ease-in-out'>
+        <div className='cursor-pointer self-start hover:-rotate-45 duration-500 ease-in-out' onClick={() => navigate(`/work${projectData.slug}`)}>
           <ArrowIcon />
         </div>
       </div>
