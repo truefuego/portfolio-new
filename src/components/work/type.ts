@@ -26,3 +26,12 @@ export interface ITableDataItemProps {
   previewImageUrl: string;
   setPreviewImageUrl: (imageUrl: string) => void;
 };
+
+
+export interface IProjectGridItemProps {
+  work: string;
+  services: string;
+  year: string;
+  slug: string;
+  previewImageUrl: string;
+}

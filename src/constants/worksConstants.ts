@@ -1,8 +1,8 @@
-import UpTodoPreviewImage from '../assets/images/uptodo-image.png';
-import PlaylistMigratorPreviewImage from '../assets/images/playlist-image.webp';
-import GeoExplorerPreviewImage from '../assets/images/geo-image.webp';
-import DuskPreviewImage from '../assets/images/dusk-image.webp';
-import PorscheClonePreviewImage from '../assets/images/porsche-image.webp';
+import UpTodoPreviewImage from '../assets/images/preview-uptodo.png';
+import PlaylistMigratorPreviewImage from '../assets/images/preview-playlist.png';
+import GeoExplorerPreviewImage from '../assets/images/preview-geo.png';
+import DuskPreviewImage from '../assets/images/preview-dusk.png';
+import PorscheClonePreviewImage from '../assets/images/preview-porsche.png';
 
 export const projectsData = [
     {
