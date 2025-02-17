@@ -7,7 +7,7 @@ import { projectsData } from "../../constants/worksConstants";
 
 const ProjectsGridView: React.FC = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-16 w-[85%]">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:w-[85%] w-[75%]">
       {projectsData.map((item, index) => {
         return <ProjectGridItem key={index} work={item.work} services={item.services} year={item.year} slug={item.slug} previewImageUrl={item.previewImageUrl}/>
       })}
