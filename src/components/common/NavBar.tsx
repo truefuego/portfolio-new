@@ -1,36 +1,24 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import CustomText from "./CustomTextNormal";
 import CustomLinkText from "./CustomLinkText";
-import { useLocation, useNavigate } from "react-router-dom";
-import CustomLoader, { CustomLoaderEnter } from "./CustomLoader";
-import { motion } from "framer-motion";
+import { useLocation } from "react-router-dom";
+import { useScreenWrapper } from "../../contexts/ScreenWrapperContext";
 
 const NavBar: React.FC = () => {
-  const navigate = useNavigate();
-  const [showExitLoader, setShowExitLoader] = useState<boolean>(false);
-  const [nextPage, setNextPage] = useState<string>('');
   const { pathname } = useLocation();
+  const { handleClick } = useScreenWrapper();
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
 
-  const handleClick = ({ link }: { link: string }) => {
-    const directedPage = window.location.pathname.split('/').pop() || '';
-    setNextPage(link.split('/').pop()?.replace(/-/g, ' ') || '');
-    setShowExitLoader(link?.substring(1) !== directedPage);
-    setTimeout(() => {
-      navigate(link);
-    }, 500);
-  }
-
   return (
     <>
       <div className="flex flex-row justify-between p-8 default-width fixed z-20 bg-gradient-to-b from-primary-background to-primary-background/0">
-        <CustomText title="ANKIT" fontFamily="climate-crisis" onClick={() => handleClick({ link: '/' })} isClickable/>
+        <CustomText title="ANKIT" fontFamily="climate-crisis" onClick={() => handleClick('/')} isClickable/>
         <div className="flex flex-row gap-16">        
-          <CustomText title="WORK" onClick={() => handleClick({ link: '/work' })} isClickable classes="hover:translate-y-2 transition-transform duration-500 ease-in-out hover:text-secondary-text" />
-          <CustomText title="ABOUT" onClick={() => handleClick({ link: '/about-me' })} isClickable classes="hover:translate-y-2 transition-transform duration-500 ease-in-out hover:text-secondary-text" />
+          <CustomText title="WORK" onClick={() => handleClick('/work')} isClickable classes="hover:translate-y-2 transition-transform duration-500 ease-in-out hover:text-secondary-text" />
+          <CustomText title="ABOUT" onClick={() => handleClick('/about-me')} isClickable classes="hover:translate-y-2 transition-transform duration-500 ease-in-out hover:text-secondary-text" />
           <CustomLinkText
             title="CONTACT ME"
             href="mailto:ankitsharma9152003@gmail.com"
@@ -46,9 +34,6 @@ const NavBar: React.FC = () => {
           />
         </div>
       </div>
-      {showExitLoader && (<CustomLoaderEnter duration={.4} path={nextPage ? nextPage : 'Hello'}/>)}
-      <CustomLoader delay={.4}/> 
-      <motion.div initial={{ height: '100vh' }} animate={{ height: '0vh' }} transition={{ delay: .5, duration: .5, ease: 'easeInOut' }} />
     </>
   );
 };

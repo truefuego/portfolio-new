@@ -2,8 +2,8 @@ import React, { MouseEvent, useState } from "react";
 import CustomText from "../common/CustomTextNormal";
 import { ITableDataItemProps } from "./type";
 import { projectsData } from "../../constants/worksConstants";
-import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
+import { useScreenWrapper } from "../../contexts/ScreenWrapperContext";
 
 const ProjectsTableView: React.FC = () => {
   const [position, setPosition] = useState<{ x: number; y: number }>({ x: 0, y: 0 });
@@ -57,11 +57,11 @@ const ProjectsTableView: React.FC = () => {
 };
 
 const TableItem: React.FC<ITableDataItemProps> = ({ work, services, techStack, year, slug, previewImageUrl, setPreviewImageUrl }) => {
-  const navigate = useNavigate();
+  const { handleClick } = useScreenWrapper();
 
   return (
     <div onMouseEnter={() => setPreviewImageUrl(previewImageUrl)} onMouseLeave={() => setPreviewImageUrl('')} >
-      <div className="grid grid-cols-5 p-6 items-center cursor-pointer" onClick={() => navigate(slug)}>
+      <div className="grid grid-cols-5 p-6 items-center cursor-pointer" onClick={() => handleClick(slug)}>
         <CustomText title={work} classes="pl-24 col-span-2 text-3xl"/>
         <CustomText title={services} classes="px-8 text-lg"/>
         <CustomText title={techStack} classes="px-8 text-lg"/>

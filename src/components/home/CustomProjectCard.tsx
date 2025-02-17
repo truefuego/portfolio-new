@@ -4,12 +4,12 @@ import CustomText from '../common/CustomTextNormal';
 import CustomImage from '../common/CustomImage';
 import { ArrowIcon } from '../../assets/icons/icons';
 import { motion, useTransform } from 'framer-motion';
-import { useNavigate } from 'react-router-dom';
+import { useScreenWrapper } from '../../contexts/ScreenWrapperContext';
 
 const CustomProjectCard:React.FC<ICustomProjectCardProps> = ({ projectData, range, targetScale, scrollProgress }) => {
-  const navigate = useNavigate();
+  const { handleClick } = useScreenWrapper();
+  const cardScale = useTransform(scrollProgress, range, [1,targetScale]);
 
-  const cardScale = useTransform(scrollProgress, range, [1,targetScale])
   return (
     <motion.div className='w-[84%] border-2 rounded-2xl sticky top-20' style={{ backgroundColor: projectData.backgroundColor, borderColor: projectData.borderColor, scale: cardScale }}>
       <div className='flex justify-between' style={{ borderBottom: '2px', borderColor: projectData.borderColor}}>
@@ -30,7 +30,7 @@ const CustomProjectCard:React.FC<ICustomProjectCardProps> = ({ projectData, rang
           </div>
           <CustomText title={`Skills - ${projectData.skills}`} classes='text-xl funnel-sans-semibold'/>
         </div>
-        <div className='cursor-pointer self-start hover:-rotate-45 duration-500 ease-in-out' onClick={() => navigate(`/work${projectData.slug}`)}>
+        <div className='cursor-pointer self-start hover:-rotate-45 duration-500 ease-in-out' onClick={() => handleClick(`/work${projectData.slug}`)}>
           <ArrowIcon />
         </div>
       </div>

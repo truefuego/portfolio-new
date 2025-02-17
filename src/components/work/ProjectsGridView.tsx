@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import CustomImage from "../common/CustomImage";
 import CustomText from "../common/CustomTextNormal";
-import { useNavigate } from "react-router-dom";
 import { IProjectGridItemProps } from "./type";
 import { projectsData } from "../../constants/worksConstants";
+import { useScreenWrapper } from "../../contexts/ScreenWrapperContext";
 
 const ProjectsGridView: React.FC = () => {
   return (
@@ -17,12 +17,12 @@ const ProjectsGridView: React.FC = () => {
 
 const ProjectGridItem: React.FC<IProjectGridItemProps> = ({ work, services, year, slug, previewImageUrl }) => {
   const [isHovering, setIsHovering] = useState<boolean>(false);
-  const navigate = useNavigate();
+  const { handleClick } = useScreenWrapper();
   const toggleHovering = () => {
     setIsHovering(prev => !prev);
   }
   return (
-    <div onClick={() => navigate(slug)} className="cursor-pointer" onMouseEnter={toggleHovering} onMouseLeave={toggleHovering}>
+    <div onClick={() => handleClick(slug)} className="cursor-pointer" onMouseEnter={toggleHovering} onMouseLeave={toggleHovering}>
       <CustomImage src={previewImageUrl} alt={work} classes={`transition-transform duration-400 ease-in-out ${isHovering ? 'scale-105': ''}`}/>
       <CustomText title={work} classes='text-3xl mt-10 mb-6' />
       <div className="h-[1px] bg-secondary-background"/>
