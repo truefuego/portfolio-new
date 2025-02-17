@@ -29,7 +29,7 @@ const NavBar: React.FC = () => {
       <div className="flex flex-row justify-between p-8 default-width fixed z-20 bg-gradient-to-b from-primary-background to-primary-background/0">
         <CustomText title="ANKIT" fontFamily="climate-crisis" onClick={() => handleClick({ link: '/' })} isClickable/>
         <div className="flex flex-row gap-16">        
-          <CustomText title="WORKS" onClick={() => handleClick({ link: '/works' })} isClickable classes="hover:translate-y-2 transition-transform duration-500 ease-in-out hover:text-secondary-text" />
+          <CustomText title="WORK" onClick={() => handleClick({ link: '/work' })} isClickable classes="hover:translate-y-2 transition-transform duration-500 ease-in-out hover:text-secondary-text" />
           <CustomText title="ABOUT" onClick={() => handleClick({ link: '/about-me' })} isClickable classes="hover:translate-y-2 transition-transform duration-500 ease-in-out hover:text-secondary-text" />
           <CustomLinkText
             title="CONTACT ME"
@@ -46,7 +46,7 @@ const NavBar: React.FC = () => {
           />
         </div>
       </div>
-      {showExitLoader && (<CustomLoaderEnter duration={.4} path={nextPage ? nextPage : 'Hello'}/>)}     
+      {showExitLoader && (<CustomLoaderEnter duration={.4} path={nextPage ? nextPage : 'Hello'}/>)}
       <CustomLoader delay={.4}/> 
       <motion.div initial={{ height: '100vh' }} animate={{ height: '0vh' }} transition={{ delay: .5, duration: .5, ease: 'easeInOut' }} />
     </>

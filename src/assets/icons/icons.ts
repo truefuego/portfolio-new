@@ -11,6 +11,8 @@ import ReactIcon from './react.svg';
 import TailwindCSSIcon from './tailwindcss.svg';
 import MongoDBIcon from './mongodb.svg';
 import PythonIcon from './python.svg'
+import GridIcon from './GridIcon.svg';
+import LinewiseIcon from './LinewiseIcon.svg';
 
 export {
     HamburgerIcon,
@@ -25,5 +27,7 @@ export {
     ReactIcon,
     TailwindCSSIcon,
     MongoDBIcon,
-    PythonIcon
+    PythonIcon,
+    GridIcon,
+    LinewiseIcon,  
 };
