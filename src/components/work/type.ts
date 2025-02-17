@@ -16,3 +16,13 @@ export interface IProjectsFilterButtonSectionProps {
   selectedViewStyle: string;
   setSelectedViewStyle: (filterType: string) => void;
 };
+
+export interface ITableDataItemProps {
+  work: string;
+  services: string;
+  techStack: string;
+  year: string;
+  slug: string;
+  previewImageUrl: string;
+  setPreviewImageUrl: (imageUrl: string) => void;
+};

@@ -30,8 +30,8 @@ const PersonalProjectsPage: React.FC = () => {
           setSelectedFilter={setSelectedFilter}
           setSelectedViewStyle={setSelectedViewStyle}
         />
-        {selectedViewStyle === viewStyleFilterTypes.FLEX ? (<ProjectsTableView />) : (<ProjectsGridView />)}
       </div>
+      {selectedViewStyle === viewStyleFilterTypes.FLEX ? (<ProjectsTableView />) : (<ProjectsGridView />)}
     </ScreenWrapper>
   );
 };

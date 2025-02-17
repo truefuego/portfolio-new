@@ -1,3 +1,5 @@
+import { CSSProperties } from "react";
+
 export interface ICustomTextProps {
     title: string;
     classes?: string;
@@ -16,6 +18,7 @@ export interface ICustomImageProps {
     alt: string;
     classes?: string;
     link?: string;
+    style?: CSSProperties;
 }
 
 export interface ICustomLoaderProps {
