@@ -141,7 +141,7 @@ export const projectsCardData = [
         ],
         skills: "React Native, JavaScript",
         imageURI: UpTodoImage,
-        slug: "/uptodo-reactnative",
+        slug: "/uptodo",
         backgroundColor: "#272727",
         borderColor: "#3A3A3A"
     }

@@ -10,7 +10,7 @@ export const projectsData = [
         services: 'Development',
         techStack: 'React Native',
         year: '2024',
-        slug: 'uptodo-reactnative',
+        slug: 'uptodo',
         previewImageUrl: UpTodoPreviewImage,
     },
     {
