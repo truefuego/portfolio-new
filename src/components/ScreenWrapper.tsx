@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { IScreenWrapperProps } from './type'
 import NavBar from './common/NavBar'
 import Footer from './common/Footer'
@@ -6,12 +6,22 @@ import CustomLoader, { CustomLoaderEnter } from './common/CustomLoader'
 import { useNavigate } from 'react-router-dom'
 import { ScreenWrapperContext } from '../contexts/ScreenWrapperContext'
 import { motion } from 'framer-motion'
+import Lenis from 'lenis'
 
 const ScreenWrapper:React.FC<IScreenWrapperProps> = ({children}) => {
   const navigate = useNavigate();
   const [showExitLoader, setShowExitLoader] = useState<boolean>(false);
   const [nextPage, setNextPage] = useState<string>('');
   
+  useEffect(() => {
+    const lenis = new Lenis();
+    function raf(time: number) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+  }, [])
+
   const handleClick = (link: string) => {
     const directedPage = window.location.pathname.split('/').pop() || '';
     setNextPage(link.split('/').pop()?.replace(/-/g, ' ') || '');

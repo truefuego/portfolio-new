@@ -9,7 +9,7 @@ const ProjectsFilterButtonSection:React.FC<IProjectsFilterButtonSectionProps> = 
     return (
         <div className='flex items-center justify-between my-24 gap-4'>
             <div className='flex items-center gap-2'>
-                {workTypeFilterOptions.map((item) => <FilterButton title={item.label} isActive={selectedFilter === item.value} onClick={() => setSelectedFilter(item.value)}/>)}
+                {workTypeFilterOptions.map((item, index) => <FilterButton key={index} title={item.label} isActive={selectedFilter === item.value} onClick={() => setSelectedFilter(item.value)}/>)}
             </div>
             <div className='md:flex gap-2 hidden'>
                 <FilterIcon Icon={LinewiseIcon} isActive={selectedViewStyle === viewStyleFilterTypes.FLEX} onClick={() => setSelectedViewStyle(viewStyleFilterTypes.FLEX)}/>
