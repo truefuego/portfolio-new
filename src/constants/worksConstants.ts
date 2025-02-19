@@ -4,6 +4,13 @@ import GeoExplorerPreviewImage from '../assets/images/preview-geo.png';
 import DuskPreviewImage from '../assets/images/preview-dusk.png';
 import PorscheClonePreviewImage from '../assets/images/preview-porsche.png';
 
+import DuskPhoto1 from '../assets/projects/dusk/dusk-p-1.png';
+import DuskPhoto2 from '../assets/projects/dusk/dusk-p-2.png';
+import DuskVideo1 from '../assets/projects/dusk/dusk-v-3.mov';
+import DuskVideo2 from '../assets/projects/dusk/dusk-v-1.mov';
+import DuskVideo3 from '../assets/projects/dusk/dusk-v-2.mov';
+import DuskVideo4 from '../assets/projects/dusk/dusk-v-4.mov';
+
 export const projectsData = [
     {
         work: 'UpTodo',
@@ -12,6 +19,12 @@ export const projectsData = [
         year: '2024',
         slug: 'uptodo',
         previewImageUrl: UpTodoPreviewImage,
+        assets: {
+            photo: [],
+            video: []
+        },
+        link: 'https://github.com/truefuego/UpTodo-ReactNative',
+        isLive: false,
     },
     {
         work: 'Playlist Migrator',
@@ -20,6 +33,12 @@ export const projectsData = [
         year: '2024',
         slug: 'playlist-migrator',
         previewImageUrl: PlaylistMigratorPreviewImage,
+        assets: {
+            photo: [],
+            video: []
+        },
+        link: 'https://github.com/truefuego/Playlist-Migrator',
+        isLive: false,
     },
     {
         work: 'Geo Explorer',
@@ -28,6 +47,12 @@ export const projectsData = [
         year: '2024',
         slug: 'geo-explorer',
         previewImageUrl: GeoExplorerPreviewImage,
+        assets: {
+            photo: [],
+            video: []
+        },
+        link: 'https://geoblitz.onrender.com/',
+        isLive: true,
     },
     {
         work: 'Dusk',
@@ -36,6 +61,12 @@ export const projectsData = [
         year: '2024',
         slug: 'dusk',
         previewImageUrl: DuskPreviewImage,
+        assets: {
+            photo: [DuskPhoto1, DuskPhoto2],
+            video: [DuskVideo1, DuskVideo2, DuskVideo3, DuskVideo4]
+        },
+        link: 'https://github.com/truefuego/Dusk',
+        isLive: false,
     },
     {
         work: 'Porsche Clone',
@@ -44,5 +75,11 @@ export const projectsData = [
         year: '2023',
         slug: 'porsche-clone',
         previewImageUrl: PorscheClonePreviewImage,
+        assets: {
+            photo: [],
+            video: []
+        },
+        link: 'https://porsche-fys5.onrender.com/',
+        isLive: true,
     },
 ];

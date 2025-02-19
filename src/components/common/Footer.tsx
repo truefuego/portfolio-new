@@ -16,7 +16,7 @@ const Footer:React.FC = () => {
 
   return (
     <>
-      <div className='w-[65%] flex items-center gap-8 my-24'>
+      <div className='w-[65%] flex items-center gap-8 mt-32 mb-16'>
         <EmailIcon />
         <CustomText title="Let's Work Together" fontFamily='climate-crisis' classes='text-5xl'/>
       </div>

@@ -13,6 +13,7 @@ import MongoDBIcon from './mongodb.svg';
 import PythonIcon from './python.svg'
 import GridIcon from './GridIcon.svg';
 import LinewiseIcon from './LinewiseIcon.svg';
+import ArrowUpRight from './Arrow up-right.svg';
 
 export {
     HamburgerIcon,
@@ -29,5 +30,6 @@ export {
     MongoDBIcon,
     PythonIcon,
     GridIcon,
-    LinewiseIcon,  
+    LinewiseIcon,
+    ArrowUpRight,
 };
