@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ScreenWrapper from "../components/ScreenWrapper";
 import CustomText from "../components/common/CustomTextNormal";
 import {
@@ -8,6 +8,8 @@ import {
 import ProjectsFilterButtonSection from "../components/work/ProjectsFilterButtonSection";
 import ProjectsTableView from "../components/work/ProjectsTableView";
 import ProjectsGridView from "../components/work/ProjectsGridView";
+import { IProjectDataProps } from "../components/type";
+import { projectsData } from "../constants/worksConstants";
 
 const PersonalProjectsPage: React.FC = () => {
   const [selectedFilter, setSelectedFilter] = useState<string>(
@@ -16,6 +18,13 @@ const PersonalProjectsPage: React.FC = () => {
   const [selectedViewStyle, setSelectedViewStyle] = useState<string>(
     viewStyleFilterTypes.FLEX
   );
+
+  const [projectListData, setProjectListData] = useState<IProjectDataProps[]>(projectsData);
+
+  useEffect(() => {
+    const filterOptions = selectedFilter === workTypeFilterTypes.ALL ? [workTypeFilterTypes.DESIGN, workTypeFilterTypes.DEVELOPMENT] : [selectedFilter];
+    setProjectListData(projectsData.filter((item) => filterOptions.includes(item.services.toLowerCase())));
+  }, [selectedFilter])
 
   return (
     <ScreenWrapper>
@@ -31,7 +40,7 @@ const PersonalProjectsPage: React.FC = () => {
           setSelectedViewStyle={setSelectedViewStyle}
         />
       </div>
-      {selectedViewStyle === viewStyleFilterTypes.FLEX ? (<ProjectsTableView />) : (<ProjectsGridView />)}
+      {selectedViewStyle === viewStyleFilterTypes.FLEX ? (<ProjectsTableView items={projectListData}/>) : (<ProjectsGridView items={projectListData}/>)}
     </ScreenWrapper>
   );
 };

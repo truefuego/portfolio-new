@@ -1,14 +1,13 @@
 import React, { useState } from "react";
 import CustomImage from "../common/CustomImage";
 import CustomText from "../common/CustomTextNormal";
-import { IProjectGridItemProps } from "./type";
-import { projectsData } from "../../constants/worksConstants";
+import { IProjectGridItemProps, IProjectViewProps } from "./type";
 import { useScreenWrapper } from "../../contexts/ScreenWrapperContext";
 
-const ProjectsGridView: React.FC = () => {
+const ProjectsGridView: React.FC<IProjectViewProps> = ({items}) => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:w-[85%] w-[75%]">
-      {projectsData.map((item, index) => {
+      {items?.map((item, index) => {
         return <ProjectGridItem key={index} work={item.work} services={item.services} year={item.year} slug={item.slug} previewImageUrl={item.previewImageUrl}/>
       })}
     </div>

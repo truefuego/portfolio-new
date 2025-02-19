@@ -1,11 +1,10 @@
 import React, { MouseEvent, useState } from "react";
 import CustomText from "../common/CustomTextNormal";
-import { ITableDataItemProps } from "./type";
-import { projectsData } from "../../constants/worksConstants";
+import { IProjectViewProps, ITableDataItemProps } from "./type";
 import { motion } from "framer-motion";
 import { useScreenWrapper } from "../../contexts/ScreenWrapperContext";
 
-const ProjectsTableView: React.FC = () => {
+const ProjectsTableView: React.FC<IProjectViewProps> = ({ items }) => {
   const [position, setPosition] = useState<{ x: number; y: number }>({ x: 0, y: 0 });
   const [isImageVisible,setIsImageVisible] = useState<boolean>(false);
   const [previewImageUrl, setPreviewImageUrl] = useState<string>('');
@@ -31,7 +30,7 @@ const ProjectsTableView: React.FC = () => {
       </div>
       <div className="h-[2px] bg-secondary-background"/>
       <div onMouseMove={handleMouseMove} onMouseEnter={toggleImageVisiblity} onMouseLeave={toggleImageVisiblity}>
-        {projectsData.map((item, index) => 
+        {items?.map((item, index) => 
           <TableItem key={index} work={item.work} 
             services={item.services} 
             techStack={item.techStack} 

@@ -22,3 +22,19 @@ export interface IGotoLinkButtonProps {
     link: string;
     classes?: string;
 }
+
+export interface IProjectDataProps {
+    work: string,
+    services: string,
+    techStack: string,
+    year: string,
+    slug: string,
+    previewImageUrl: string,
+    assets: {
+        photo: string[],
+        video: string[]
+    },
+    hasPreviews: boolean,
+    link: string,
+    isLive: boolean,
+};

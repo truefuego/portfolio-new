@@ -1,3 +1,5 @@
+import { IProjectDataProps } from "../type";
+
 export interface IFilterButtonProps{
     title: string;
     isActive: boolean;
@@ -34,4 +36,8 @@ export interface IProjectGridItemProps {
   year: string;
   slug: string;
   previewImageUrl: string;
+};
+
+export interface IProjectViewProps {
+  items: IProjectDataProps[];
 }
