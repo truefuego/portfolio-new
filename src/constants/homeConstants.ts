@@ -88,7 +88,7 @@ export const projectsCardData = [
     {
         title: "Geo Explorer",
         year: 2024,
-        type: "Web App",
+        type: "Website",
         about: [
             {
                 label: "Interactive Experience",
@@ -107,8 +107,8 @@ export const projectsCardData = [
     },
     {
         title: "Porsche Desktop Clone",
-        year: 2024,
-        type: "Web App",
+        year: 2023,
+        type: "Website",
         about: [
             {
                 label: "Pixel-Perfect UI",

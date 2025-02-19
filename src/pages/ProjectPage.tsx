@@ -44,21 +44,21 @@ const ProjectPage:React.FC = () => {
 
       <div>
         <GotoLinkButton isLive={projectData.isLive} link={projectData.link} classes='bg-sky-600 w-12 h-12 md:w-36 md:h-36 rounded-full absolute right-[10vw] translate-y-10 translate-x-2 md:-translate-y-3 md:translate-x-8'/>
-        <VideoPlayer videoURI={projectData.assets.video[0]} width={getPercentage(width, 75)} />
+        {projectData.hasPreviews ? (<VideoPlayer videoURI={projectData.assets.video[0]} width={getPercentage(width, 75)} />) : (<></>)}
       </div>
       <div className='flex flex-col w-screen items-center justify-center py-16 bg-secondary-background'>
         <CustomImage src={projectData.assets.photo[0]} alt='photo-1' classes='w-[75%]'/>
       </div>
 
-      <VideoPlayer videoURI={projectData.assets.video[1]} width={getPercentage(width, 75)} />
+      {projectData.hasPreviews ? (<VideoPlayer videoURI={projectData.assets.video[1]} width={getPercentage(width, 75)} />) : (<></>)}
 
-      <VideoPlayer videoURI={projectData.assets.video[2]} width={getPercentage(width, 100)} isFullWidth/>
+      {projectData.hasPreviews ? (<VideoPlayer videoURI={projectData.assets.video[2]} width={getPercentage(width, 100)} isFullWidth/>) : (<></>)}
 
       <div className='flex flex-col w-screen items-center justify-center py-16 bg-secondary-background'>
         <CustomImage src={projectData.assets.photo[1]} alt='photo-2' classes='w-[75%]'/>
       </div>
 
-      <VideoPlayer videoURI={projectData.assets.video[3]} width={getPercentage(width, 75)} bgColor='secondary-background'/>
+      {projectData.hasPreviews ? (<VideoPlayer videoURI={projectData.assets.video[3]} width={getPercentage(width, 75)} bgColor='secondary-background'/>) : (<></>)}
     </ScreenWrapper>
   )
 }
