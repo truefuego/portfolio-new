@@ -55,7 +55,7 @@ const ProjectPage:React.FC = () => {
       <VideoPlayer videoURI={projectData.assets.video[2]} width={getPercentage(width, 100)} isFullWidth/>
 
       <div className='flex flex-col w-screen items-center justify-center py-16 bg-secondary-background'>
-        <CustomImage src={projectData.assets.photo[0]} alt='photo-1' classes='w-[75%]'/>
+        <CustomImage src={projectData.assets.photo[1]} alt='photo-2' classes='w-[75%]'/>
       </div>
 
       <VideoPlayer videoURI={projectData.assets.video[3]} width={getPercentage(width, 75)} bgColor='secondary-background'/>
