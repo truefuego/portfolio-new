@@ -14,6 +14,7 @@ import PythonIcon from './python.svg'
 import GridIcon from './GridIcon.svg';
 import LinewiseIcon from './LinewiseIcon.svg';
 import ArrowUpRight from './Arrow up-right.svg';
+import EmptyList from './empty-list.svg';
 
 export {
     HamburgerIcon,
@@ -32,4 +33,5 @@ export {
     GridIcon,
     LinewiseIcon,
     ArrowUpRight,
+    EmptyList,
 };

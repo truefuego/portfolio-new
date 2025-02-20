@@ -4,3 +4,7 @@ export const getPercentage = (num: number, percentage: number) => {
     }
     return (num * percentage) / 100;
 };
+
+export const isArrayEmpty = <T>(data: T[]): boolean => {
+    return data.length === 0;
+};

@@ -3,6 +3,8 @@ import CustomText from "../common/CustomTextNormal";
 import { IProjectViewProps, ITableDataItemProps } from "./type";
 import { motion } from "framer-motion";
 import { useScreenWrapper } from "../../contexts/ScreenWrapperContext";
+import { isArrayEmpty } from "../../utils/utils";
+import EmptyProjectList from "./EmptyProjectList";
 
 const ProjectsTableView: React.FC<IProjectViewProps> = ({ items }) => {
   const [position, setPosition] = useState<{ x: number; y: number }>({ x: 0, y: 0 });
@@ -11,6 +13,10 @@ const ProjectsTableView: React.FC<IProjectViewProps> = ({ items }) => {
 
   const toggleImageVisiblity = () => {
     setIsImageVisible(prev => !prev);
+  }
+
+  if (isArrayEmpty(items)) {
+    return <EmptyProjectList />
   }
 
   const handleMouseMove = (e: MouseEvent<HTMLDivElement>) => {
