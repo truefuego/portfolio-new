@@ -16,13 +16,13 @@ const Footer:React.FC = () => {
 
   return (
     <>
-      <div className='w-[65%] flex items-center gap-8 mt-32 mb-16'>
+      <div className='w-[65%] flex items-center gap-8 md:gap-8 mt-32 mb-8 md:mb-16 md:flex-row flex-col text-center'>
         <EmailIcon />
-        <CustomText title="Let's Work Together" fontFamily='climate-crisis' classes='text-5xl'/>
+        <CustomText title="Let's Work Together" fontFamily='climate-crisis' classes='text-2xl md:text-5xl'/>
       </div>
-      <div className='flex justify-between w-[85%] mt-8 items-center my-24'>
+      <div className='flex justify-between w-[85%] mt-8 items-center md:my-24 flex-col md:flex-row gap-6'>
         <div className='flex items-center gap-4'>
-          <CustomText title='Say Hello' fontFamily='funnel-sans-semibold' classes='mx-4'/>
+          <CustomText title='Say Hello' fontFamily='funnel-sans-semibold' classes='mx-4 text-sm md:text-base'/>
           <div className='rounded-full hover:scale-110 duration-500 ease-in-out cursor-pointer' onClick={() => window.open('https://x.com/AnkitSh44355307', '_blank')}>
             <TwitterIcon />
           </div>
@@ -33,14 +33,14 @@ const Footer:React.FC = () => {
         <CustomText 
           title="Passionate about building scalable apps and solving complex problems? let's collaborate on innovative tech solutions!" 
           fontFamily='funnel-sans'
-          classes='w-[35%] text-center'
+          classes='w-[100%] md:w-[35%] text-center text-xs md:text-sm'
         />
         <CustomLinkText
           title="Send a message"
           href="mailto:ankitsharma9152003@gmail.com"
           isClickable
           textColor='button-text'
-          classes="funnel-sans-medium bg-sky-200 cursor-pointer px-4 py-2 mx-4 rounded-2xl hover:bg-sky-300 hover:scale-105 text-button-text duration-700 ease-in-out border-2 border-amber-50"
+          classes="funnel-sans-medium bg-sky-200 text-xs cursor-pointer px-4 py-2 mx-4 rounded-2xl hover:bg-sky-300 hover:scale-105 text-button-text duration-700 ease-in-out border-2 border-amber-50"
         />
       </div>
       <div className='w-[85%] flex m-12'>
