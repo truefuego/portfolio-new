@@ -1,46 +1,33 @@
 import React from 'react'
 import ScreenWrapper from '../components/ScreenWrapper';
 import CustomText from '../components/common/CustomTextNormal';
-import { ICustomLabelProps } from '../components/type';
 import CustomImage from '../components/common/CustomImage';
 import ProfilePhoto from '../assets/images/profile-photo.jpg';
 import InfiniteSlider from '../components/InfiniteSlider';
 import AboutMeDataSection from '../components/aboutMe/AboutMeDataSection';
+import AboutMeHeroLabel from '../components/aboutMe/AboutMeHeroLabel';
 
 const AboutMePage:React.FC = () => {
-
-  const RenderLabel:React.FC<ICustomLabelProps> = ({ label, text }) => {
-    return (
-      <div className='flex w-fill flex-col'>
-        <div className='flex w-fill items-center gap-2'>
-          <CustomText classes='text-tertiary-text' title={label} fontFamily='fugaz-one'/>
-          <div className='h-[.5px] w-[100%] bg-tertiary-text'/>
-        </div>
-        <CustomText title={text} classes='text-secondary-text text-2xl' fontFamily='fugaz-one'/>
-      </div>
-    )
-  }
-
   return (
     <ScreenWrapper>
       <div className='flex flex-col h-screen w-[75%] items-center justify-around'>
         <div className='flex mt-24 w-fill justify-between'>
-          <div className='flex flex-col w-[calc(100%-300px)] gap-2 overflow-hidden'>
+          <div className='flex flex-col lg:w-[calc(100%-300px)] gap-12 overflow-hidden'>
             <CustomText 
               title='I build high-performance applications, prioritizing efficiency, innovation, and seamless user experiences.' 
               fontFamily='fugaz-one' 
-              classes='text-5xl leading-16'
+              classes='text-xl md:text-3xl lg:text-4xl xl:text-5xl text-center lg:text-start xl:w-[80%]'
             />
             <InfiniteSlider />
           </div>
-          <div className=''>
-            <CustomImage src={ProfilePhoto} alt='profile-photo' classes='h-[400px] w-[300px] rounded-2xl shad'/>
+          <div className='hidden lg:flex'>
+            <CustomImage src={ProfilePhoto} alt='profile-photo' classes='h-[400px] w-[300px] rounded-2xl'/>
           </div>
         </div>
-        <div className='grid grid-cols-3 w-[100%] gap-16'>
-          <RenderLabel label='.experience' text='6 Months'/>
-          <RenderLabel label='.location' text='Bhilai, IN'/>
-          <RenderLabel label='.freelance' text='Available'/>
+        <div className='grid grid-cols-1 md:grid-cols-3 w-[100%] gap-4 md:gap-16'>
+          <AboutMeHeroLabel label='.experience' text='6 Months'/>
+          <AboutMeHeroLabel label='.location' text='Bhilai, IN'/>
+          <AboutMeHeroLabel label='.freelance' text='Available'/>
         </div>
       </div>
       <AboutMeDataSection />

@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 const AboutMeLabel:React.FC<ICustomTextProps> = ({ title , classes}) => {
     return (
         <motion.div
-            className={`${classes} flex w-[60%] items-center gap-2 mb-12`} 
+            className={`${classes} flex w-[100%] md:w-[60%] items-center gap-2 mb-12`} 
             initial={{ opacity: 0, y: 50, scale: .9}}
             whileInView={{
                 opacity: 1,
