@@ -19,6 +19,7 @@ const PersonalProjectsPage: React.FC = () => {
     viewStyleFilterTypes.FLEX
   );
 
+  const [screenWidth, setScreenWidth] = useState<number>(window.innerWidth);
   const [projectListData, setProjectListData] = useState<IProjectDataProps[]>(projectsData);
 
   useEffect(() => {
@@ -26,12 +27,19 @@ const PersonalProjectsPage: React.FC = () => {
     setProjectListData(projectsData.filter((item) => filterOptions.includes(item.services.toLowerCase())));
   }, [selectedFilter])
 
+
+  useEffect(() => {
+    const updateWidth = () => setScreenWidth(window.innerWidth);
+    window.addEventListener("resize", updateWidth);
+    return () => window.removeEventListener("resize", updateWidth);
+  }, []);
+
   return (
     <ScreenWrapper>
-      <div className="w-[65%] mt-48">
+      <div className="w-[65%] mt-32 md:48">
         <CustomText
           title="Creating next level digital products"
-          classes="w-[70%] text-7xl"
+          classes="w-[85%] md:w-[70%] text-5xl md:text-7xl"
         />
         <ProjectsFilterButtonSection
           selectedFilter={selectedFilter}
@@ -40,7 +48,7 @@ const PersonalProjectsPage: React.FC = () => {
           setSelectedViewStyle={setSelectedViewStyle}
         />
       </div>
-      {selectedViewStyle === viewStyleFilterTypes.FLEX ? (<ProjectsTableView items={projectListData}/>) : (<ProjectsGridView items={projectListData}/>)}
+      {(selectedViewStyle === viewStyleFilterTypes.FLEX) && (screenWidth >= 1024) ? (<ProjectsTableView items={projectListData}/>) : (<ProjectsGridView items={projectListData}/>)}
     </ScreenWrapper>
   );
 };
