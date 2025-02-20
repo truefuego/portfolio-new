@@ -23,22 +23,22 @@ const ProjectPage:React.FC = () => {
   
   return (
     <ScreenWrapper>
-      <CustomText title={projectData.work} classes='w-[75%] text-8xl mt-48'/>
-      <div className='grid grid-cols-3 w-[75%] gap-16 my-20'>
+      <CustomText title={projectData.work} classes='w-[75%] text-6xl md:text-8xl mt-32 md:mt-48'/>
+      <div className='grid grid-cols-1 md:grid-cols-3 w-[75%] md:gap-16 my-12 md:my-20'>
         <div className='flex w-fill flex-col'>
           <CustomText title='ROLE / SERVICES' classes='text-tertiary-text text-xs'/>
-          <div className='my-4 h-[.5px] w-[100%] bg-tertiary-text'/>
-          <CustomText title={projectData.services} classes='mb-8 text-2xl' fontFamily='funnel-sans-semibold'/>
+          <div className='my-1 md:my-4 h-[.5px] w-[100%] bg-tertiary-text'/>
+          <CustomText title={projectData.services} classes='mb-8 text-xl md:text-2xl' fontFamily='funnel-sans-semibold'/>
         </div>
         <div className='flex w-fill flex-col'>
           <CustomText title='TECH STACK' classes='text-tertiary-text text-xs'/>
-          <div className='my-4 h-[.5px] w-[100%] bg-tertiary-text'/>
-          <CustomText title={projectData.techStack} classes='mb-8 text-2xl' fontFamily='funnel-sans-semibold'/>
+          <div className='my-1 md:my-4 h-[.5px] w-[100%] bg-tertiary-text'/>
+          <CustomText title={projectData.techStack} classes='mb-8 text-xl md:text-2xl' fontFamily='funnel-sans-semibold'/>
         </div>
         <div className='flex w-fill flex-col'>
           <CustomText title='YEAR' classes='text-tertiary-text text-xs'/>
-          <div className='my-4 h-[.5px] w-[100%] bg-tertiary-text'/>
-          <CustomText title={projectData.year} classes='mb-8 text-2xl' fontFamily='funnel-sans-semibold'/>
+          <div className='my-1 md:my-4 h-[.5px] w-[100%] bg-tertiary-text'/>
+          <CustomText title={projectData.year} classes='mb-8 text-xl md:text-2xl' fontFamily='funnel-sans-semibold'/>
         </div>
       </div>
 
