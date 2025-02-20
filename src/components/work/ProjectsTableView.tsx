@@ -27,7 +27,11 @@ const ProjectsTableView: React.FC<IProjectViewProps> = ({ items }) => {
   };
 
   return (
-    <div className="flex flex-col w-[85%] mb-48">
+    <motion.div 
+      className="flex flex-col w-[85%] mb-48"
+      initial={{ opacity: 0, y: 100 }}
+      animate={{ opacity: 1, y: 0, transition: { duration:.5, damping: .5 }}}
+    >
       <div className="grid grid-cols-5 p-6">
         <CustomText title="WORK" textColor="secondary-text" classes="col-span-2 pl-24 text-xs"/>
         <CustomText title="SERVICES" textColor="secondary-text" classes="px-8 text-xs"/>
@@ -57,7 +61,7 @@ const ProjectsTableView: React.FC<IProjectViewProps> = ({ items }) => {
           animate={{ opacity: 1, transition: {duration: .5, damping: .5}, height: 400, width: 400 }}
         />
       )}
-    </div>
+    </motion.div>
   );
 };
 

@@ -5,6 +5,7 @@ import { IProjectGridItemProps, IProjectViewProps } from "./type";
 import { useScreenWrapper } from "../../contexts/ScreenWrapperContext";
 import EmptyProjectList from "./EmptyProjectList";
 import { isArrayEmpty } from "../../utils/utils";
+import { motion } from "framer-motion";
 
 const ProjectsGridView: React.FC<IProjectViewProps> = ({items}) => {
 
@@ -13,11 +14,15 @@ const ProjectsGridView: React.FC<IProjectViewProps> = ({items}) => {
   }
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:w-[85%] w-[75%]">
+    <motion.div 
+      className="grid grid-cols-1 md:grid-cols-2 gap-16 md:w-[85%] w-[75%]"
+      initial={{ opacity: 0, y: 100 }}
+      animate={{ opacity: 1, y: 0, transition: { duration:.5, damping: .5 }}}
+    >
       {items?.map((item, index) => {
         return <ProjectGridItem key={index} work={item.work} services={item.services} year={item.year} slug={item.slug} previewImageUrl={item.previewImageUrl}/>
       })}
-    </div>
+    </motion.div>
   );
 };
 
