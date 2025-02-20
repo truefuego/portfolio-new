@@ -33,7 +33,7 @@ const Footer:React.FC = () => {
         <CustomText 
           title="Passionate about building scalable apps and solving complex problems? let's collaborate on innovative tech solutions!" 
           fontFamily='funnel-sans'
-          classes='w-[100%] md:w-[35%] text-center text-xs md:text-sm'
+          classes='w-[100%] md:w-[35%] text-center text-xs md:text-sm xl:text-base'
         />
         <CustomLinkText
           title="Send a message"
