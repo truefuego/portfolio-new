@@ -7,7 +7,7 @@ import { IProjectsFilterButtonSectionProps } from './type';
 
 const ProjectsFilterButtonSection:React.FC<IProjectsFilterButtonSectionProps> = ({ selectedFilter, setSelectedFilter, selectedViewStyle, setSelectedViewStyle }) => {
     return (
-        <div className='items-center justify-between my-24 gap-4'>
+        <div className='flex items-center justify-between my-24 gap-4'>
             <div className='flex items-center gap-2'>
                 {workTypeFilterOptions.map((item, index) => <FilterButton key={index} title={item.label} isActive={selectedFilter.toLowerCase() === item.value} onClick={() => setSelectedFilter(item.value)}/>)}
             </div>
