@@ -17,6 +17,7 @@ const HomeHeroSection:React.FC = () => {
             fontFamily='climate-crisis'
             classes='text-center text-[5.4vw] -mt-[5vh] sm:-mt-[10vw] shining-text'
         />
+        <div className='text-primary-text text-hero-large hidden' /> 
         <div className='flex flex-col md:flex-row justify-between w-[85%] mt-16 items-center gap-4'>
             <div className='flex items-center gap-4'>
                 <CustomText title='Say Hello' fontFamily='funnel-sans-semibold' classes='mx-4 text-sm'/>
