@@ -19,19 +19,21 @@ const CustomProjectCard:React.FC<ICustomProjectCardProps> = ({ projectData, rang
       <div className='align-center mx-1 h-[2px]' style={{ backgroundColor: projectData.borderColor }}/>
       <div className='p-4 flex justify-between'>
         <div>
-          <CustomText title={projectData.title} fontFamily='climate-crisis' classes='text-4xl'/>
-          <div className='flex gap-8 my-4'>
+          <div className='flex justify-between items-center'>
+            <CustomText title={projectData.title} fontFamily='climate-crisis' classes='text-xl md:text-4xl'/>
+            <div className='cursor-pointer self-start hover:-rotate-45 duration-500 ease-in-out scale-50 md:scale-100' onClick={() => handleClick(`/work${projectData.slug}`)}>
+              <ArrowIcon />
+            </div>
+          </div>
+          <div className='flex gap-8 mb-4'>
             {projectData?.about?.map((item, index) => (
               <div key={index}>
-                <CustomText title={item.label} classes='text-2xl funnel-sans-semibold'/>
-                <CustomText title={item.text} classes='text-lg funnel-sans-medium'/>
+                <CustomText title={item.label} classes='md:text-2xl funnel-sans-semibold'/>
+                <CustomText title={item.text} classes='text-xs md:text-lg funnel-sans-medium'/>
               </div>
             ))}
           </div>
-          <CustomText title={`Skills - ${projectData.skills}`} classes='text-xl funnel-sans-semibold'/>
-        </div>
-        <div className='cursor-pointer self-start hover:-rotate-45 duration-500 ease-in-out' onClick={() => handleClick(`/work${projectData.slug}`)}>
-          <ArrowIcon />
+          <CustomText title={`Skills - ${projectData.skills}`} classes='text-sm md:text-xl funnel-sans-semibold'/>
         </div>
       </div>
       <CustomImage src={projectData.imageURI} alt={projectData.title} classes='w-[calc(100%-16px)] m-2 rounded-2xl object-cover object-center max-h-[70vh]'/>

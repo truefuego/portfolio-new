@@ -30,7 +30,7 @@ const CustomAboutMeSection:React.FC = () => {
           fontFamily='funnel-sans-semibold'
         />
       </div>
-      <div className='w-[65%] z-10 my-24'>
+      <div className='w-[85%] md:w-[65%] z-10 my-24'>
         <CustomText title='MY STACK' fontFamily='climate-crisis' fontSize='2xl md:text-4xl'/>
         <CustomText title='Commitment to staying updated with the latest trends and techniques.' classes='text-xs md:text-sm' textColor='secondary-text'/>
         <div className='grid md:grid-cols-2 grid-cols-1 gap-4 mt-8'>

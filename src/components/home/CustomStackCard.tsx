@@ -12,7 +12,7 @@ const CustomStackCard:React.FC<ICustomStackCardProps> = ({ title, description, l
       </div>
       <div className='pl-3'>
         <CustomText title={title} fontFamily='funnel-sans-semibold md:text-lg'/>
-        <CustomText title={description} classes='text-[8px] md:text-sm md:hidden xl:block' textColor='secondary-text'/>
+        <CustomText title={description} classes='text-[10px] md:text-sm md:hidden xl:block' textColor='secondary-text'/>
       </div>
     </div>
     <ArrowRightIcon />

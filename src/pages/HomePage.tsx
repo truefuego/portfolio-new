@@ -16,7 +16,7 @@ const HomePage:React.FC = () => {
   return (
     <ScreenWrapper>
       <HomeHeroSection />
-      <div className='flex flex-col w-[100%] items-center my-24' ref={containerRef}>
+      <div className='flex flex-col w-[100%] items-center my-24 gap-8' ref={containerRef}>
         {projectsCardData.map((project, index) => {
           const targetScale = 1 - ((projectsCardData.length - 1 - index) * 0.05);
           return (
