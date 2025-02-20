@@ -18,10 +18,10 @@ const CustomProjectCard:React.FC<ICustomProjectCardProps> = ({ projectData, rang
       </div>
       <div className='align-center mx-1 h-[2px]' style={{ backgroundColor: projectData.borderColor }}/>
       <div className='p-4 flex justify-between'>
-        <div>
-          <div className='flex justify-between items-center'>
+        <div className='flex flex-col w-[100%]'>
+          <div className='flex w-[fill] justify-between items-center'>
             <CustomText title={projectData.title} fontFamily='climate-crisis' classes='text-xl md:text-4xl'/>
-            <div className='cursor-pointer self-start hover:-rotate-45 duration-500 ease-in-out scale-50 md:scale-100' onClick={() => handleClick(`/work${projectData.slug}`)}>
+            <div className='cursor-pointer self-start hover:-rotate-45 duration-400 ease-in-out scale-50 md:scale-100' onClick={() => handleClick(`/work${projectData.slug}`)}>
               <ArrowIcon />
             </div>
           </div>
