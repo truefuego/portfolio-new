@@ -26,3 +26,10 @@ export interface ICustomLoaderProps {
     duration?: number;
     path?: string;
 }
+
+export interface INavSideButtonProps {
+    title: string;
+    onClick: () => void;
+    isOpen: boolean;
+    classes: string;
+}

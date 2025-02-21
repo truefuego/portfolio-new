@@ -15,6 +15,8 @@ import GridIcon from './GridIcon.svg';
 import LinewiseIcon from './LinewiseIcon.svg';
 import ArrowUpRight from './Arrow up-right.svg';
 import EmptyList from './empty-list.svg';
+import NavHamIcon from './nav-ham-icon.svg';
+import NavCrossIcon from './cross-icon.svg';
 
 export {
     HamburgerIcon,
@@ -34,4 +36,6 @@ export {
     LinewiseIcon,
     ArrowUpRight,
     EmptyList,
+    NavCrossIcon,
+    NavHamIcon,
 };
