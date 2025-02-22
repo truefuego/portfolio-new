@@ -15,6 +15,7 @@ const HomeHeroSection:React.FC = () => {
         <CustomText 
             title='Designer & Developer'
             fontFamily='climate-crisis'
+            textColor='secondary-text'
             classes='text-center text-[5.4vw] -mt-[5vh] sm:-mt-[10vw] shining-text'
         />
         <div className='text-primary-text text-hero-large hidden' /> 
